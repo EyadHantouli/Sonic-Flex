@@ -1,0 +1,313 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+/* Main menu roles */
+
+.welcome {
+    font-size: 3vmax;
+}
+.high-score {
+    font-size: 2vmax;
+    color: gray;
+}
+
+.main-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999999;
+    background-color: #1c1c1cbe;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+
+.menu-box {
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-width: 70%;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 4px 20px 0px rgb(0 0 0);
+}
+
+.menu-box #signin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+#signin-form input[type='text'], #signin-form input[type='number'] {
+    background: white;
+    padding: 5px 20px;
+    border: 1px solid black;
+    outline: 0;
+    width: 70%;
+    height: 40px;
+    font-size: 18px;
+    margin: auto;
+    font-family: monospace;
+    cursor: url('../images/sonic_cursor-01-01-01-01-01-01-01-01-01.png'),auto;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#signin-form input[type='submit'] {
+    width: 40%;
+    height: 40px;
+    font-size: 18px;
+    margin: auto;
+    font-family: monospace;
+    border: 0;
+    background: #4caf50;
+    padding: 5px 10px;
+    cursor: url('../images/sonic_cursor-01-01-01-01-01-01-01-01-01.png'),auto;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+}
+
+#signin-form input[type='submit']:hover {
+    background-color: #4fc653;
+    box-shadow: -8px 8px 0 #2caf30;
+}
+
+.buttons {
+    width: 40%;
+    min-width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-box button {
+    width: 40%;
+    min-width: 140px;
+    margin: auto;
+    height: 40px;
+    font-size: 18px;
+    font-family: monospace;
+    border: 0;
+    padding: 5px 10px;
+    background-color: #ffc107;
+    cursor: url('../images/sonic_cursor-01-01-01-01-01-01-01-01-01.png'),auto;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.menu-box button:hover {
+    background-color: #ffc821;
+    box-shadow: -8px 8px 0 #eeb200;
+}
+
+/* In game roles */
+
+.nav {
+    height: 5vh;
+    background-color: #343a52;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.game-board {
+    width: 100%;
+    height: 95vh;
+    background-color: #1c1c1c;
+    cursor: url('../images/sonic_cursor-01-01-01-01-01-01-01-01-01.png'),auto;
+    background-image: url('../images/game_bg-02.jpg');
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.game-board .goal-circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1/1;
+    left: -50%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    /* background-color: yellow; */
+    box-shadow: inset 0 0 10px 0px #f7ff005e, inset 0px -5px 10px #ff8e00, inset 0 0 10px 0px #ffe312, 0px 0px 4px 0px #f7ff0061;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.game-board .goal-circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+    border: 10px solid #ffd900ca;
+    box-shadow: inset 0 0 3px 1px #f7ff00;
+    
+
+    
+}
+
+
+.goal1 {
+    animation: move 5s 0s forwards ease-in;
+    -webkit-animation: move 5s 0s forwards ease-in;
+    top: 0%;
+}
+
+@keyframes move {
+    to {
+        left: 150%;
+    }
+}
+
+.goal2 {
+    animation: move2 3s 0s forwards ease-in;
+    -webkit-animation: move2 3s 0s forwards ease-in;
+    top: 50%;
+}
+
+@keyframes move2 {
+    to {
+        left: 150%;
+}
+}
+
+.goal3 {
+    animation: move3 7s 0s forwards ease-in;
+    -webkit-animation: move3 7s 0s forwards ease-in;
+    top: 50%;
+}
+
+@keyframes move3 {
+    to {
+        left: 150%;
+}
+}
+
+.goal4 {
+    animation: move4 6s 0s forwards ease-in;
+    -webkit-animation: move4 6s 0s forwards ease-in;
+    top: 80%;
+}
+
+@keyframes move4 {
+    to {
+        left: 120%;
+}
+}
+
+.goal5 {
+    animation: move5 3s 0s forwards ease-in;
+    -webkit-animation: move5 3s 0s forwards ease-in;
+    top: 20%;
+}
+
+@keyframes move5 {
+    to {
+        left: 120%;
+}
+}
+
+.goal6 {
+    animation: move6 6s 1s forwards ease-in;
+    -webkit-animation: move6 6s 1s forwards ease-in;
+    top: 40%;
+}
+
+@keyframes move6 {
+    to {
+        left: 130%;
+}
+}
+
+.goal7 {
+    animation: move7 3s 2s forwards ease-in;
+    -webkit-animation: move7 3s 2s forwards ease-in;
+    top: 90%;
+}
+
+@keyframes move7 {
+    to {
+        left: 130%;
+}
+}
+
+.goal8 {
+    animation: move8 4s 2s forwards ease-in;
+    -webkit-animation: move8 4s 2s forwards ease-in;
+    top: 10%;
+}
+
+@keyframes move8 {
+    to {
+        left: 130%;
+}
+}
+
+.goal9 {
+    animation: move9 6s 1s forwards ease-in;
+    -webkit-animation: move9 6s 1s forwards ease-in;
+    top: 90%;
+}
+
+@keyframes move9 {
+    to {
+        left: 120%;
+}
+}

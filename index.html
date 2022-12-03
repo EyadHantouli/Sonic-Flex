@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/game.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/7f56c37e45.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <title>Sonic Flex</title>
+</head>
+<body>
+    <!-- Main Tags -->
+    <div class="container">
+        <div class="black"></div>
+        <div class="about">
+            <div>
+                <i class="fa-solid fa-xmark"></i>
+                <h4>
+                    Hello there,
+                </h4>
+                <h5>
+                    This website made by Eyad Hantouli.
+                    <br>
+                    You can contact me using <a style="color: #03a9f4;" target='_blank' href="https://www.eyadhantouli.ml">my website</a>.
+                    <br>
+                    Or by email: <i style="color: #eee">eyadwaill123456789@gmail.com</i>.
+                    <br>
+                    Enjoy in this Sonic Flex game (close me, scroll down, break the fast 😋)
+                </h5>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="./images/cornflex.png" alt="cornflex image" class="landing-image">
+            </div>
+            <div class="col">
+                <div class="title">
+                    <h1>Sonic Flex</h1>
+                    <br>
+                    <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo modi earum molestias dolorum, aliquid alias. Velit enim inventore temporibus incidunt nemo doloribus esse vel nostrum itaque, accusamus harum dolorum quo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gap">
+        <hr>
+        &copy Eyad Hantouli | Email: eyadwaill123456789@gmail.com | Website: <a style="color: #03a9f4;" target='_blank' href="https://www.eyadhantouli.ml">www.eyadhantouli.ml</a>
+    </div>
+
+    <!-- Game Tags -->
+    <div class="nav">
+        <p>Time: <i class="timer">???</i></p>
+        <p>Scores: <i class="scores">???</i></p>
+    </div>
+    <div class="game-board">
+        <div class="inner-game-board">
+        </div>
+        <main class="main-menu">
+            <div class="menu-box">
+                <p class="welcome">Welcome - </p>
+                <p class="high-score">High Score: ???</p>
+                <br>
+                <form id="signin-form">
+                    <input required autocomplete="off" id='username' name="username" type="text" placeholder="Username">
+                    <input id='age' name="age" type="number" placeholder="Age" min="1" max="999">
+                    <input type="submit" value="submit">
+                </form>
+                <br> 
+                <div class="buttons">
+                    <button onclick="window.open('./scores.html')">Leaderboard</button>
+                    <button id="start-btn">Start</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./pick.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
